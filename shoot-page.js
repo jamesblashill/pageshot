@@ -81,21 +81,15 @@ function reportPageShot() {
     errors: errors
   };
   console.log(JSON.stringify(pageShotReport, " ", 2));
+  console.log("#####");
 }
 
 function shootPage() {
-  page.open(config.pageUrl, function(err) {
-    if (err) {
-      console.log(err);
-      phantom.exit();
-      return;
-    }
-
-    setTimeout(function() {
-      reportPageShot();
-      phantom.exit();
-    }, 30000);
-  });
+  page.open(config.pageUrl);
+  setTimeout(function() {
+    reportPageShot();
+    phantom.exit();
+  }, 30000);
 }
 
 shootPage();

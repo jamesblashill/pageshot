@@ -7,7 +7,7 @@ const reportsPath = __dirname + "/reports";
 
 exec("phantomjs shoot-page.js", function(code, stdout, stderr) {
   mkdir("-p", reportsPath);
-  const report = JSON.parse(stdout);
+  const report = JSON.parse(stdout.split("#####")[0]);
   PageShot.create({
     url: report.pageUrl,
     duration: report.loadEnd - report.loadStart,
