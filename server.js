@@ -1,5 +1,6 @@
 const express = require("express");
 const PageShot = require("./page-shot");
+const scheduler = require("./scheduler");
 
 const app = express();
 const port = process.env.PORT || 3333;
@@ -15,3 +16,6 @@ app.get("/api/page_shots", async (req, res) => {
 app.listen(port, () =>
   console.log(`Page shots app listening on port ${port}!`)
 );
+
+scheduler.start();
+scheduler.runNow();

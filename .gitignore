@@ -2,3 +2,4 @@ node_modules
 screenshots
 reports
 config.json
+db.sqlite3
