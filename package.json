@@ -1,0 +1,11 @@
+{
+  "name": "pageshot",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.4",
+    "shelljs": "^0.8.2",
+    "sqlite3": "^4.0.2"
+  }
+}
